@@ -1,1 +1,1 @@
-# Dofiles
+# Dotfiles

@@ -27,6 +27,7 @@ set hidden
 set ruler
 set nohlsearch
 syntax on
+set mouse=a
 "set hlsearch
 colorscheme symfony
 "Set tab indent, 4 spaces
@@ -55,6 +56,13 @@ set showmatch
 "
 " Statusline configs --- {{{
 set laststatus=2
+let g:airline_powerline_fonts=1
+let g:airline_theme='jorch'
+let g:airline#extensions#tmuxline#enabled = 0
+let airline#extensions#tmuxline#color_template = 'normal' 
+let airline#extensions#tmuxline#color_template = 'insert'
+let airline#extensions#tmuxline#color_template = 'visual'
+let airline#extensions#tmuxline#color_template = 'replace' 
 
 "=========================================================
 "					Mappings and stuff 					 "
@@ -62,6 +70,10 @@ set laststatus=2
 "	
 "Set jk to go back to normal mode when on insert mode
 inoremap jk <esc>
+"Set Ctrl+Tab & Ctrol+Shift+Tab to switch buffers
+nnoremap  :bnext<CR>
+nnoremap  :bprev<CR>
+
 "=========================================================
 "					Helpers and functions				 "
 "=========================================================
